@@ -80,7 +80,7 @@ const Gpt3Navbar = styled.div`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 2rem 6rem;
+	padding: 2rem 4rem 2rem 5rem;
 
 	@media screen and (max-width: 700px) {
 		padding: 2rem 4rem;
@@ -99,11 +99,11 @@ const Gpt3NavbarLinks = styled.div`
 `;
 
 const Gpt3NavbarLinksLogo = styled.div`
-	margin-right: 2rem;
+	margin-right: 5rem;
 
 	& > img {
-		width: 62.56px;
-		height: 16.02px;
+		width: 92.56px;
+		height: 46.02px;
 	}
 `;
 
@@ -119,10 +119,17 @@ const Gpt3NavbarLinksContainer = styled.div`
 		text-transform: capitalize;
 		margin: 0 1rem;
 		cursor: pointer;
+
+		&:hover {
+			text-decoration: underline;
+			transform: scale(1.2);
+			transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+		}
 	}
 
 	@media screen and (max-width: 1050px) {
 		display: none;
+		/* width: 1000px; */
 	}
 `;
 
@@ -140,10 +147,16 @@ const Gpt3NavbarSign = styled.div`
 		text-transform: capitalize;
 		margin: 0 1rem;
 		cursor: pointer;
+
+		&:hover {
+			text-decoration: underline;
+			transform: scale(1.2);
+			transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+		}
 	}
 
 	& > button {
-		padding: 1rem 2rem;
+		padding: 0.5rem 1.5rem;
 		color: #fff;
 		font-family: var(--font-family);
 		font-weight: 500;
@@ -154,6 +167,11 @@ const Gpt3NavbarSign = styled.div`
 		border: none;
 		outline: none;
 		cursor: pointer;
+
+		&:hover {
+			text-decoration: underline;
+			transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+		}
 	}
 
 	@media screen and (max-width: 550px) {
@@ -210,6 +228,8 @@ const Gpt3NavbarMenuContainer = styled.div`
 `;
 
 const Gpt3NavbarMenuContainerLinks = styled.div`
+	width: 200px;
+
 	& > p {
 		color: #fff;
 		font-family: var(--font-family);
@@ -219,6 +239,10 @@ const Gpt3NavbarMenuContainerLinks = styled.div`
 		text-transform: capitalize;
 		margin: 0 1rem;
 		cursor: pointer;
+
+		&:hover {
+			text-decoration: underline;
+		}
 	}
 `;
 
