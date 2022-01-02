@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Feature from "../components/Feature";
 
 const featuresData = [
 	{
@@ -29,15 +30,70 @@ function Features() {
 				</h1>
 				<p>Request Early Access to Get Started</p>
 			</GptFeaturesHeading>
-			<GptFeaturesContainer></GptFeaturesContainer>
+			<GptFeaturesContainer>
+				{featuresData.map((item, index) => (
+					<Feature
+						title={item.title}
+						text={item.text}
+						key={item.title + index}
+					/>
+				))}
+			</GptFeaturesContainer>
 		</Gpt3Features>
 	);
 }
 
 export default Features;
 
-const Gpt3Features = styled.div``;
+const Gpt3Features = styled.div`
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
 
-const GptFeaturesHeading = styled.div``;
+	@media screen and (max-width: 990px) {
+		flex-direction: column;
+	}
+`;
 
-const GptFeaturesContainer = styled.div``;
+const GptFeaturesHeading = styled.div`
+	flex: 1;
+	display: flex;
+	justify-content: flex-start;
+	align-items: flex-start;
+	flex-direction: column;
+	margin-right: 5rem;
+	text-align: left;
+
+	& > h1 {
+		font-family: var(--font-family);
+		font-weight: 800;
+		font-size: 34px;
+		line-height: 45px;
+
+		@media screen and (max-width: 550px) {
+			font-size: 28px;
+			line-height: 38px;
+		}
+	}
+
+	& > p {
+		font-family: var(--font-family);
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 30px;
+		color: var(--color-subtext);
+		margin-top: 2rem;
+	}
+
+	@media screen and (max-width: 990px) {
+		margin: 0 0 2rem 0;
+	}
+`;
+
+const GptFeaturesContainer = styled.div`
+	flex: 1.5;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-direction: column;
+`;

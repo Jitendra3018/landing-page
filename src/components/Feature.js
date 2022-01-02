@@ -2,14 +2,6 @@ import styled from "styled-components";
 
 function Feature({ title, text }) {
 	return (
-		// <div className="gpt3__features-container__feature">
-		// 	<div className="gpt3__features-container__feature-title">
-		// 		<div></div>
-		// 		<h1>{title}</h1>
-		// 	</div>
-		// 	<div className="gpt3__features-container_feature-text">{text}</div>
-		// </div>
-
 		<Gpt3FeaturesContainerFeature className="gpt3__features-container__feature">
 			<Gpt3FeaturesContainerFeatureTitle className="gpt3__features-container__feature-title">
 				<div />
@@ -39,7 +31,6 @@ const Gpt3FeaturesContainerFeature = styled.div`
 const Gpt3FeaturesContainerFeatureTitle = styled.div`
 	flex: 1;
 	max-width: 180px;
-	/* margin-right: 2rem; */
 
 	& > h1 {
 		font-family: var(--font-family);
