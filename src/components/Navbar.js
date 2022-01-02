@@ -80,7 +80,14 @@ const Gpt3Navbar = styled.div`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding: 2rem 4rem 2rem 5rem;
+	padding: 2rem 5rem;
+
+	position: fixed;
+	width: 100%;
+	z-index: 1;
+	background: var(--color-footer);
+	box-shadow: 0 50px 50px rgba(0, 0, 0, 0.5);
+	margin-bottom: 25px;
 
 	@media screen and (max-width: 700px) {
 		padding: 2rem 4rem;
@@ -103,7 +110,7 @@ const Gpt3NavbarLinksLogo = styled.div`
 
 	& > img {
 		width: 92.56px;
-		height: 46.02px;
+		height: 16.02px;
 	}
 `;
 
@@ -129,7 +136,6 @@ const Gpt3NavbarLinksContainer = styled.div`
 
 	@media screen and (max-width: 1050px) {
 		display: none;
-		/* width: 1000px; */
 	}
 `;
 
@@ -187,6 +193,7 @@ const Gpt3NavbarMenu = styled.div`
 	& > svg {
 		cursor: pointer;
 	}
+
 	@media screen and (max-width: 1050px) {
 		display: flex;
 	}

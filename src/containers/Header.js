@@ -4,7 +4,7 @@ import ai from "../assets/ai.png";
 
 function Header() {
 	return (
-		<Gpt3Header className="section__padding" id="home">
+		<Gpt3Header className="section1__padding" id="home">
 			<Gpt3HeaderContent>
 				<h1 className="gradient__text">
 					Let's Build Something Amazing with GPT-3 Open AI
@@ -37,9 +37,19 @@ export default Header;
 
 const Gpt3Header = styled.div`
 	display: flex;
+	padding-top: 110px;
+
+	@media screen and (max-width: 1500px) {
+		padding-top: 150px;
+	}
 
 	@media screen and (max-width: 1050px) {
 		flex-direction: column;
+		/* padding-top: 150px; */
+	}
+
+	@media screen and (max-width: 490px) {
+		padding-top: 120px;
 	}
 `;
 
@@ -50,7 +60,6 @@ const Gpt3HeaderContent = styled.div`
 	align-items: flex-start;
 	flex-direction: column;
 	margin-right: 5rem;
-	margin-left: 5rem;
 
 	& > h1 {
 		font-family: var(--font-family);
@@ -58,6 +67,16 @@ const Gpt3HeaderContent = styled.div`
 		font-size: 62px;
 		line-height: 75px;
 		letter-spacing: -0.04rem;
+
+		@media screen and (max-width: 650px) {
+			font-size: 48px;
+			line-height: 60px;
+		}
+
+		@media screen and (max-width: 490px) {
+			font-size: 36px;
+			line-height: 48px;
+		}
 	}
 
 	& > p {
@@ -68,36 +87,20 @@ const Gpt3HeaderContent = styled.div`
 		line-height: 27px;
 		color: var(--color-text);
 		margin-top: 1.5rem;
-	}
 
-	@media screen and (max-width: 1050px) {
-		margin: 0 2.5rem;
-	}
-
-	@media screen and (max-width: 650px) {
-		margin: 0 2rem;
-
-		& > h1 {
-			font-size: 48px;
-			line-height: 60px;
-		}
-
-		& > p {
+		@media screen and (max-width: 650px) {
 			font-size: 16px;
 			line-height: 24px;
 		}
-	}
 
-	@media screen and (max-width: 490px) {
-		& > h1 {
-			font-size: 36px;
-			line-height: 48px;
-		}
-
-		& > p {
+		@media screen and (max-width: 490px) {
 			font-size: 14px;
 			line-height: 20px;
 		}
+	}
+
+	@media screen and (max-width: 1050px) {
+		margin: 0 2rem;
 	}
 `;
 
@@ -111,8 +114,7 @@ const Gpt3HeaderContentInput = styled.div`
 		width: 100%;
 		min-height: 50px;
 		background: var(--color-footer);
-		border-top-left-radius: 5px;
-		border-bottom-left-radius: 5px;
+		border-radius: 5px;
 		font-family: var(--font-family);
 		font-size: 20px;
 		line-height: 27px;
@@ -124,8 +126,7 @@ const Gpt3HeaderContentInput = styled.div`
 
 	& > button {
 		background: #ff4820;
-		border-top-right-radius: 5px;
-		border-bottom-right-radius: 5px;
+		border-radius: 5px;
 		font-family: var(--font-family);
 		font-weight: bold;
 		line-height: 27px;
@@ -138,6 +139,12 @@ const Gpt3HeaderContentInput = styled.div`
 		outline: none;
 		padding: 0 1rem;
 		border: none;
+		margin-left: 20px;
+
+		&:hover {
+			transform: scale(1.2);
+			transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+		}
 	}
 
 	@media screen and (max-width: 650px) {
