@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import possibilityImage from "../assets/possibility.png";
+import possibilityImage from "../assets/possibility.webp";
 
 function Possibility() {
 	return (

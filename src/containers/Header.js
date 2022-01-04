@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import people from "../assets/people.png";
-import ai from "../assets/ai.png";
+import people from "../assets/people.webp";
+import ai from "../assets/ai.webp";
 
 function Header() {
 	return (
